@@ -1,3 +1,11 @@
+Vue.component('todoitem', {
+
+    props: ['todotext'],
+
+    template: '<p>{{ todotext }}</p>'
+
+});
+
 new Vue({
 
     el: "#app",
