@@ -24,9 +24,7 @@
             <p v-if="todos.length == 0">Nothing to do? Great! Have fun!</p>
 
             <ul class="list-group">
-                <li class="list-group-item" v-for="(todo, index) in todos" v-on:click="removeTodo(index);">
-                    <i class="far fa-trash-alt mr-3 text-danger"></i> {{ todo }}
-                </li>
+                <todoitem v-for="(todo, index) in todos" v-bind:todotext="todo" v-bind:todoindex="index"></todoitem>
             </ul>
 
         </div>
