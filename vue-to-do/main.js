@@ -1,8 +1,16 @@
 Vue.component('todoitem', {
 
-    props: ['todotext'],
+    props: ['todotext', 'todoindex'],
 
-    template: '<p>{{ todotext }}</p>'
+    methods: {
+
+        recordclick: function() {
+            this.$parent.removeTodo(this.todoindex);
+        }
+
+    },
+
+    template: '<li class="list-group-item" v-on:click="recordclick();"><i class="far fa-trash-alt mr-3 text-danger"></i> {{ todotext }}</li>'
 
 });
 
