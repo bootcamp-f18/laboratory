@@ -1,3 +1,5 @@
+var Vue = window.Vue = require('vue');
+
 Vue.component('sample', require("./Sample.vue"));
 
 let app1 = new Vue({
